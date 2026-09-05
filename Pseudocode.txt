@@ -1,0 +1,53 @@
+Pseudocode
+BEGIN
+    Initialize dynamic arrays for vehicles and services
+    Load saved records from files
+
+    REPEAT
+        Display main menu
+
+        READ choice
+
+        IF choice = 1
+            Read customer and vehicle details
+            Validate registration number
+            Add record
+        ELSE IF choice = 2
+            Search vehicle by registration number
+            Read service date, type, mileage, cost and remarks
+            Add service record
+        ELSE IF choice = 3
+            Search vehicle by registration number
+            Read part name, quantity, cost, replacement date
+            Read recommended interval in days
+            Calculate next replacement date
+            Add spare-part record
+        ELSE IF choice = 4
+            Search vehicle by registration number
+            Display customer, vehicle, service and spare-part history
+        ELSE IF choice = 5
+            Search record by registration number/customer ID
+            Modify selected fields
+        ELSE IF choice = 6
+            Search record by registration number/customer ID
+            Delete selected record
+        ELSE IF choice = 7
+            Read number of reminder days
+            For every spare part
+                Calculate days until next replacement
+                If due within requested days
+                    Display reminder
+        ELSE IF choice = 8
+            Calculate total service expenses
+            Count spare-part replacements
+            Display frequently replaced parts
+            Display vehicles requiring upcoming maintenance
+        ELSE IF choice = 9
+            Save all records to files
+            Display exit message
+        ELSE
+            Display invalid choice
+        END IF
+
+    UNTIL choice = 9
+END
